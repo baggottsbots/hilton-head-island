@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/hilton-head-island/">
+<!-- BASE:END -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+
+<!-- SEO Meta Tags -->
+<title>Hilton Head Island | Official Town Website</title>
+<meta name="description" content="Discover Hilton Head Island - a premier coastal destination with world-class beaches, golf, recreation and economic opportunity. Home of the PGA Heritage Classic." />
+<meta property="og:title" content="Hilton Head Island | Official Town Website" />
+<meta property="og:description" content="Discover Hilton Head Island - a premier coastal destination with world-class beaches, golf, recreation and economic opportunity. Home of the PGA Heritage Classic." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Hilton Head Island | Official Town Website" />
+<meta name="twitter:description" content="Discover Hilton Head Island - a premier coastal destination with world-class beaches, golf, recreation and economic opportunity. Home of the PGA Heritage Classic." />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mriku449-d922c";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  var u=new URL(location.href);var found=null;var changed=false;
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{localStorage.setItem(map[p]+slug,v);}catch(e){}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-gate>
+(function(){
+  var slug='lp-mriku449-d922c';var apiBase='https://my.chatbees.io';var currency='USD';var presets=[2500,5000,10000,25000];var minAmt=100;var maxAmt=1000000;var thankYouMsg='Thank you for your generous donation!';
+  var successSubtext='Your donation has been processed successfully.';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function getLang(){var l=(document.documentElement.lang||navigator.language||'en').toLowerCase();return l.split('-')[0];}
+  function getLocale(){return (document.documentElement.lang||navigator.language||'en');}
+  var I18N={en:{min:'Minimum is ',max:'Maximum is ',emailPrompt:'Enter your email for the receipt:',emailRequired:'An email address is required to complete checkout.',failed:'Failed to process donation'},fr:{min:'Le minimum est ',max:'Le maximum est ',emailPrompt:'Entrez votre adresse e-mail pour le reçu :',emailRequired:'Une adresse e-mail est requise pour finaliser le paiement.',failed:'Échec du traitement du don'},es:{min:'El mínimo es ',max:'El máximo es ',emailPrompt:'Introduce tu correo electrónico para el recibo:',emailRequired:'Se requiere una dirección de correo electrónico para completar el pago.',failed:'No se pudo procesar la donación'},pt:{min:'O mínimo é ',max:'O máximo é ',emailPrompt:'Insira seu e-mail para o recibo:',emailRequired:'Um endereço de e-mail é necessário para concluir o pagamento.',failed:'Falha ao processar a doação'},de:{min:'Mindestbetrag ist ',max:'Höchstbetrag ist ',emailPrompt:'Geben Sie Ihre E-Mail-Adresse für die Quittung ein:',emailRequired:'Eine E-Mail-Adresse ist erforderlich, um den Checkout abzuschließen.',failed:'Spende konnte nicht verarbeitet werden'},it:{min:'Il minimo è ',max:'Il massimo è ',emailPrompt:'Inserisci la tua email per la ricevuta:',emailRequired:"È richiesto un indirizzo email per completare il pagamento.",failed:'Impossibile elaborare la donazione'}};
+  function t(k){var L=getLang();return (I18N[L]&&I18N[L][k])||I18N.en[k];}
+  function fmtD(c){try{return new Intl.NumberFormat(getLocale(),{style:'currency',currency:currency}).format(c/100);}catch(e){return new Intl.NumberFormat('en-US',{style:'currency',currency:currency}).format(c/100);}}
+  function findDonEmail(){var ids=['email','emailAddress','buyer-email','buyerEmail','donor-email','donorEmail','user-email','userEmail','contact-email'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.indexOf('@')>-1)return el.value.trim();}var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.indexOf('@')>-1)return inputs[j].value.trim();}return '';}
+  function findDonName(){var ids=['name','fullName','full-name','donor-name','donorName','customer-name','user-name'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"])');for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}return '';}
+  function findDonPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  window.__processDonation=function(a,b,c,d){
+    var amountCents,email='',donorName='',donorMessage='',productName='',productDescription='',quantity=1;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents||(a.amount?Math.round(Number(a.amount)*100):0);
+      email=a.email||'';
+      productName=a.productName||a.label||'';
+      productDescription=a.productDescription||a.description||'';
+      donorName=a.name||a.donorName||'';
+      donorMessage=a.message||a.donorMessage||'';
+      quantity=a.quantity&&parseInt(a.quantity,10)>0?parseInt(a.quantity,10):1;
+    }else{
+      amountCents=typeof a==='number'?a:(parseInt(a,10)||0);
+      var rest=[b,c,d];var nonEmail=[];
+      for(var i=0;i<rest.length;i++){var v=rest[i];if(typeof v==='string'&&v){if(!email&&v.indexOf('@')>-1&&/^[^s@]+@[^s@]+.[^s@]+$/.test(v.trim())){email=v.trim();}else{nonEmail.push(v);}}}
+      donorName=nonEmail[0]||'';donorMessage=nonEmail[1]||'';
+    }
+    if(!email)email=findDonEmail();
+    if(!donorName)donorName=findDonName();
+    var donorPhone=findDonPhone();
+    if(!amountCents||amountCents<minAmt){alert(t('min')+fmtD(minAmt));return Promise.reject('below_min');}
+    if(amountCents>maxAmt){alert(t('max')+fmtD(maxAmt));return Promise.reject('above_max');}
+    if(!email){var p=window.prompt(t('emailPrompt'),'');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert(t('emailRequired'));return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/donation/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:donorName||'',phone:donorPhone||'',amountCents:amountCents,message:donorMessage||'',productName:productName||'',productDescription:productDescription||'',quantity:quantity,locale:getLocale(),successUrl:successBase+'?donation=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?donation=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||t('failed'));throw new Error(d.error);}
+    });
+  };
+  window.__donationConfig={currency:currency,presets:presets.map(function(c){return c/100;}),minAmount:minAmt/100,maxAmount:maxAmt/100,formatAmount:fmtD};
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('donation')==='success'){
+      var sidD=urlParams.get('session_id');
+      if(sidD){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidD})}).catch(function(){});}catch(e){}}
+      var overlay=document.createElement('div');overlay.id='donation-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">'+esc(thankYouMsg)+'</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(successSubtext)+'</p><button id="lp-don-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var dBtn=document.getElementById('lp-don-success-btn');
+      if(dBtn){dBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://my.chatbees.io/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=5477');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='UhmpcPCf2';
+  var apiBase='https://my.chatbees.io';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='UhmpcPCf2';
+  var apiBase='https://my.chatbees.io';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="tail-container text-gray-800 overflow-x-hidden">
+    <!-- ============================================================================ -->
+    <!-- NAVBAR: Official town navigation with logo, menu and mobile toggle          -->
+    <!-- Features: Fixed header, responsive mobile menu, anchor links                -->
+    <!-- ============================================================================ -->
+    <nav data-section="navbar" class="bg-white border-b border-gray-100 shadow-sm fixed w-full z-50">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 bg-[#003366] rounded-2xl flex items-center justify-center text-white text-2xl leading-none pt-0.5">🌴</div>
+                    <div>
+                        <span class="heading-font text-2xl font-bold tracking-tighter text-[#003366]">HILTON HEAD</span>
+                        <span class="block text-[10px] text-teal-600 -mt-1 tracking-[1px] font-medium">ISLAND, SC</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#economic" class="nav-link text-gray-700 hover:text-[#003366]">Economy</a>
+                    <a href="#attractions" class="nav-link text-gray-700 hover:text-[#003366]">Attractions</a>
+                    <a href="#events" class="nav-link text-gray-700 hover:text-[#003366]">Events</a>
+                    <a href="#living" class="nav-link text-gray-700 hover:text-[#003366]">Live Here</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-[#003366]">Contact</a>
+                </div>
+                
+                <div class="flex items-center gap-x-4">
+                    <button onclick="toggleMobileMenu()" 
+                            class="md:hidden w-10 h-10 flex items-center justify-center text-[#003366] hover:bg-gray-100 rounded-xl transition-colors">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                    
+                    <a href="#contact" 
+                       class="hidden sm:flex items-center px-6 py-2.5 bg-[#36D6B5] hover:bg-[#2bc9a4] text-[#003366] font-semibold text-sm rounded-3xl transition-all active:scale-95 shadow-inner">
+                        VISIT US
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t py-4 px-6">
+            <div class="flex flex-col gap-y-5 text-base font-medium">
+                <a href="#economic" onclick="toggleMobileMenu()" class="py-2 border-b border-gray-100 text-gray-700">Economic Development</a>
+                <a href="#attractions" onclick="toggleMobileMenu()" class="py-2 border-b border-gray-100 text-gray-700">Attractions &amp; Recreation</a>
+                <a href="#events" onclick="toggleMobileMenu()" class="py-2 border-b border-gray-100 text-gray-700">Events &amp; Calendar</a>
+                <a href="#living" onclick="toggleMobileMenu()" class="py-2 border-b border-gray-100 text-gray-700">Quality of Life</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="py-2 text-gray-700">Contact Town Hall</a>
+                
+                <div class="pt-6">
+                    <button onclick="toggleMobileMenu();document.getElementById('contact').scrollIntoView({behavior:'smooth'})" 
+                            class="w-full py-4 bg-[#003366] text-white font-semibold rounded-3xl flex items-center justify-center gap-x-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>INQUIRE NOW</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================================ -->
+    <!-- HERO SECTION: Stunning beach image with overlay and prominent CTA            -->
+    <!-- Mobile-first typography, ensures headline visibility on 375px screens       -->
+    <!-- ============================================================================ -->
+    <header data-section="hero" class="hero-bg h-screen flex items-center pt-16 relative">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 text-white">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-x-2 bg-white/20 backdrop-blur-md text-white text-xs font-medium tracking-widest px-5 h-7 rounded-3xl mb-6">
+                    <div class="w-2 h-2 bg-[#36D6B5] rounded-full animate-pulse"></div>
+                    OFFICIAL TOWN WEBSITE
+                </div>
+                
+                <h1 class="heading-font hero-headline text-white leading-none font-semibold tracking-tighter mb-6">
+                    DISCOVER<br>HILTON HEAD<br>ISLAND
+                </h1>
+                
+                <p class="text-xl text-white/90 max-w-md mb-10">
+                    A world-class coastal destination blending natural beauty, economic vitality, and Southern hospitality.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" 
+                            class="px-8 py-5 bg-[#36D6B5] hover:bg-white hover:text-[#003366] text-[#003366] font-semibold text-lg rounded-3xl flex items-center gap-x-3 transition-all shadow-xl shadow-teal-900/30">
+                        PLAN YOUR VISIT
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    
+                    <button onclick="document.getElementById('economic').scrollIntoView({ behavior: 'smooth' })" 
+                            class="px-8 py-5 border-2 border-white/80 hover:border-white text-white font-medium rounded-3xl flex items-center gap-x-3 transition-all">
+                        LEARN MORE
+                    </button>
+                </div>
+                
+                <div class="mt-16 flex items-center gap-x-8 text-sm">
+                    <div class="flex items-center">
+                        <div class="flex -space-x-4">
+                            <div class="w-6 h-6 bg-white rounded-2xl flex items-center justify-center text-[10px] shadow">🏖️</div>
+                            <div class="w-6 h-6 bg-white rounded-2xl flex items-center justify-center text-[10px] shadow">⛳</div>
+                        </div>
+                    </div>
+                    <div class="text-white/70 text-xs leading-tight">
+                        HOME OF THE<br>
+                        <span class="font-semibold text-white">HERITAGE CLASSIC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll prompt -->
+        <div class="absolute bottom-12 left-1/2 flex flex-col items-center gap-y-1 text-white/60 text-xs tracking-widest">
+            <div class="animate-bounce">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <span>SCROLL TO EXPLORE</span>
+        </div>
+        
+        <!-- Trust bar -->
+        <div class="absolute bottom-0 left-0 right-0 bg-white/10 backdrop-blur-md py-5 hidden lg:flex items-center justify-center gap-x-16 text-xs font-medium">
+            <div class="flex items-center gap-x-6">
+                <i class="fa-solid fa-leaf text-[#36D6B5]"></i>
+                <span class="text-white">CERTIFIED SUSTAINABLE</span>
+            </div>
+            <div class="h-3 w-px bg-white/30"></div>
+            <div>2026 PGA HERITAGE CLASSIC • APRIL 13-19</div>
+            <div class="h-3 w-px bg-white/30"></div>
+            <div class="flex items-center gap-x-2">
+                <span class="px-3 py-1 bg-white/20 text-[10px] rounded-3xl">4.98</span>
+                <span class="text-white">TRIPADVISOR RATING</span>
+            </div>
+        </div>
+        
+        <!-- Floating badge -->
+        <div class="absolute top-28 right-12 hidden xl:flex pga-badge text-white text-center px-5 py-4 rounded-3xl shadow-2xl items-center gap-x-3 rotate-[-8deg]">
+            <div>
+                <i class="fa-solid fa-trophy text-4xl text-amber-300"></i>
+            </div>
+            <div class="text-left text-xs leading-none">
+                <div class="font-bold tracking-wider">HERITAGE</div>
+                <div class="text-teal-300 text-[17px]">CLASSIC</div>
+                <div class="text-[10px] text-white/70">2026</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================================ -->
+    <!-- STATS SECTION: Key economic and tourism impact metrics                      -->
+    <!-- Four cards with icons, numbers, and descriptions. Uses Tailwind animations  -->
+    <!-- ============================================================================ -->
+    <section data-section="stats" class="py-20 bg-white">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Stat 1 -->
+                <div class="stat-card bg-white border border-gray-100 shadow-xl rounded-3xl p-8 text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 bg-teal-100 text-[#36D6B5] rounded-2xl flex items-center justify-center text-3xl">
+                        💰
+                    </div>
+                    <div class="text-5xl heading-font font-semibold text-[#003366] mb-1">$2.8B</div>
+                    <div class="uppercase text-xs tracking-[1px] text-gray-500 font-medium mb-3">Annual Tourism Revenue</div>
+                    <p class="text-gray-500 text-sm">Driving our local economy year after year</p>
+                </div>
+                
+                <!-- Stat 2 -->
+                <div class="stat-card bg-white border border-gray-100 shadow-xl rounded-3xl p-8 text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 bg-amber-100 text-amber-500 rounded-2xl flex items-center justify-center text-3xl">
+                        👥
+                    </div>
+                    <div class="text-5xl heading-font font-semibold text-[#003366] mb-1">2.8M</div>
+                    <div class="uppercase text-xs tracking-[1px] text-gray-500 font-medium mb-3">Annual Visitors</div>
+                    <p class="text-gray-500 text-sm">From around the world to our shores</p>
+                </div>
+                
+                <!-- Stat 3 -->
+                <div class="stat-card bg-white border border-gray-100 shadow-xl rounded-3xl p-8 text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 bg-violet-100 text-violet-500 rounded-2xl flex items-center justify-center text-3xl">
+                        🏗️
+                    </div>
+                    <div class="text-5xl heading-font font-semibold text-[#003366] mb-1">160</div>
+                    <div class="uppercase text-xs tracking-[1px] text-gray-500 font-medium mb-3">New Businesses in 2025</div>
+                    <p class="text-gray-500 text-sm">Entrepreneurial growth continues</p>
+                </div>
+                
+                <!-- Stat 4 -->
+                <div class="stat-card bg-white border border-gray-100 shadow-xl rounded-3xl p-8 text-center relative overflow-hidden">
+                    <div class="w-12 h-12 mx-auto mb-6 bg-red-100 text-red-500 rounded-2xl flex items-center justify-center text-3xl">
+                        ⛳
+                    </div>
+                    <div class="text-5xl heading-font font-semibold text-[#003366] mb-1">PGA</div>
+                    <div class="uppercase text-xs tracking-[1px] text-gray-500 font-medium mb-3">HERITAGE CLASSIC</div>
+                    <p class="text-gray-500 text-sm">World-class golf on our doorstep</p>
+                    
+                    <div class="absolute -bottom-6 -right-6 text-[130px] font-black text-[#003366]/5 leading-none">H</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- FEATURES / VALUES SECTION: Six core pillars of Hilton Head                    -->
+    <!-- Responsive grid, hover effects, meaningful icons                             -->
+    <!-- ============================================================================ -->
+    <section data-section="values" class="py-20 bg-[#f8f9fb]">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col items-center text-center mb-16">
+                <span class="px-5 py-2 bg-white text-[#36D6B5] text-xs font-semibold rounded-3xl mb-4 shadow">WHY HILTON HEAD</span>
+                <h2 class="heading-font text-5xl text-[#003366] tracking-tighter font-semibold">Six Pillars of Excellence</h2>
+                <p class="max-w-md text-gray-600 mt-4">What makes our island community truly unique</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="feature-card bg-white rounded-3xl overflow-hidden border border-gray-100">
+                    <div class="h-2 bg-gradient-to-r from-emerald-400 to-teal-400"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="text-5xl">🌿</div>
+                            <span class="text-xs px-4 py-2 bg-emerald-100 text-emerald-700 rounded-3xl font-medium">SUSTAINABILITY</span>
+                        </div>
+                        <h3 class="heading-font text-2xl text-[#003366] mb-3">Eco-Friendly Development</h3>
+                        <p class="text-gray-600">Thoughtful growth that preserves our pristine environment, wetlands, and maritime forests for future generations.</p>
+                        <ul class="mt-8 space-y-3 text-sm">
+                            <li class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#36D6B5] text-xs"></i> 60% of island is protected green space</li>
+                            <li class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#36D6B5] text-xs"></i> LEED certified building standards</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="feature-card bg-white rounded-3xl overflow-hidden border border-gray-100">
+                    <div class="h-2 bg-gradient-to-r from-blue-400 to-cyan-400"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="text-5xl">🏄</div>
+                            <span class="text-xs px-4 py-2 bg-sky-100 text-sky-700 rounded-3xl font-medium">RECREATION</span>
+                        </div>
+                        <h3 class="heading-font text-2xl text-[#003366] mb-3">World-Class Recreation</h3>
+                        <p class="text-gray-600">Miles of pristine beaches, 20+ championship golf courses, kayaking, tennis, biking, and water sports.</p>
+                        <ul class="mt-8 space-y-3 text-sm">
+                            <li class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#36D6B5] text-xs"></i> 12 miles of beaches</li>
+                            <li class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#36D6B5] text-xs"></i> Over 60 miles of bike paths</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="feature-card bg-white rounded-3xl overflow-hidden border border-gray-100">
+                    <div class="h-2 bg-gradient-to-r from-amber-400 to-orange-400"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="text-5xl">📈</div>
+                            <span class="text-xs px-4 py-2 bg-amber-100 text-amber-700 rounded-3xl font-medium">ECONOMY</span>
+                        </div>
+                        <h3 class="heading-font text-2xl text-[#003366] mb-3">Economic Opportunity</h3>
+                        <p class="text-gray-600">Thriving business community with low taxes, access to capital, and a highly educated workforce.</p>
+                        <ul class="mt-8 space-y-3 text-sm">
+                            <li class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#36D6B5] text-xs"></i> $2.8 billion tourism economy</li>
+                            <li class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#36D6B5] text-xs"></i> 160 new businesses last year</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="feature-card bg-white rounded-3xl overflow-hidden border border-gray-100">
+                    <div class="h-2 bg-gradient-to-r from-purple-400 to-violet-400"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="text-5xl">🎭</div>
+                            <span class="text-xs px-4 py-2 bg-purple-100 text-purple-700 rounded-3xl font-medium">HERITAGE</span>
+                        </div>
+                        <h3 class="heading-font text-2xl text-[#003366] mb-3">Cultural Heritage</h3>
+                        <p class="text-gray-600">Gullah Geechee roots, historic sites, world-class arts scene, and vibrant local traditions.</p>
+                        <ul class="mt-8 space-y-3 text-sm">
+                            <li class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#36D6B5] text-xs"></i> Gullah Geechee corridor</li>
+                            <li class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#36D6B5] text-xs"></i> 20+ annual cultural festivals</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="feature-card bg-white rounded-3xl overflow-hidden border border-gray-100">
+                    <div class="h-2 bg-gradient-to-r from-rose-400 to-pink-400"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="text-5xl">📍</div>
+                            <span class="text-xs px-4 py-2 bg-rose-100 text-rose-700 rounded-3xl font-medium">LOCATION</span>
+                        </div>
+                        <h3 class="heading-font text-2xl text-[#003366] mb-3">Strategic Location</h3>
+                        <p class="text-gray-600">Just 45 minutes from Savannah and 2.5 hours from Charleston. Easy access via Hilton Head Island Airport.</p>
+                        <ul class="mt-8 space-y-3 text-sm">
+                            <li class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#36D6B5] text-xs"></i> HXD regional airport</li>
+                            <li class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#36D6B5] text-xs"></i> Direct flights to 8 cities</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="feature-card bg-white rounded-3xl overflow-hidden border border-gray-100">
+                    <div class="h-2 bg-gradient-to-r from-cyan-400 to-teal-400"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="text-5xl">🏡</div>
+                            <span class="text-xs px-4 py-2 bg-cyan-100 text-cyan-700 rounded-3xl font-medium">COMMUNITY</span>
+                        </div>
+                        <h3 class="heading-font text-2xl text-[#003366] mb-3">Quality Living</h3>
+                        <p class="text-gray-600">Exceptional schools, low crime, beautiful neighborhoods, and an active, engaged citizenry.</p>
+                        <ul class="mt-8 space-y-3 text-sm">
+                            <li class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#36D6B5] text-xs"></i> Top-rated public schools</li>
+                            <li class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#36D6B5] text-xs"></i> 14 neighborhoods with HOA amenities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- ECONOMIC DEVELOPMENT SECTION                                                 -->
+    <!-- ============================================================================ -->
+    <section id="economic" data-section="economic-development" class="py-20 bg-white">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-7">
+                    <div class="sticky top-28">
+                        <span class="inline-flex items-center gap-x-2 text-teal-600 text-sm font-semibold">
+                            <span class="block w-6 h-px bg-teal-300"></span>
+                            GROWING TOGETHER
+                        </span>
+                        <h2 class="heading-font text-[#003366] text-5xl font-semibold tracking-tighter leading-none mt-3 mb-6">
+                            Economic Development &amp; Opportunity
+                        </h2>
+                        <p class="text-lg text-gray-600 max-w-lg">
+                            Hilton Head Island continues to attract entrepreneurs, investors, and remote professionals seeking a high quality of life with a robust business environment.
+                        </p>
+                        
+                        <div class="flex items-center gap-x-10 mt-12">
+                            <div>
+                                <div class="text-6xl font-semibold text-[#36D6B5] heading-font">7.1%</div>
+                                <div class="text-xs uppercase tracking-widest text-gray-500">Average annual growth</div>
+                            </div>
+                            <div class="h-12 w-px bg-gray-200"></div>
+                            <div class="text-gray-600">
+                                Our Business Development Team offers relocation assistance, permitting navigation, grant opportunities and more.
+                            </div>
+                        </div>
+                        
+                        <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" 
+                                class="mt-10 flex items-center gap-x-4 group">
+                            <span class="text-sm font-semibold tracking-wider uppercase">Speak with our team</span>
+                            <div class="w-10 h-10 flex items-center justify-center border border-gray-300 group-active:scale-90 transition-all rounded-2xl">
+                                →
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-5">
+                    <div class="bg-gray-50 border border-gray-100 rounded-3xl p-8">
+                        <div class="aspect-video bg-[#003366] rounded-3xl mb-8 flex items-center justify-center text-white relative overflow-hidden">
+                            <div class="absolute inset-0 bg-[radial-gradient(at_center,#ffffff15_1px,transparent_1px)] [background-size:20px_20px]"></div>
+                            <div class="text-center z-10">
+                                <i class="fa-solid fa-chart-line text-7xl opacity-30"></i>
+                                <div class="mt-6 text-xs tracking-[2px] font-medium">HILTON HEAD ECONOMIC DASHBOARD</div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-8">
+                            <div class="flex gap-5">
+                                <div class="text-4xl font-light text-gray-300">01</div>
+                                <div>
+                                    <div class="font-semibold text-[#003366]">Tourism &amp; Hospitality</div>
+                                    <div class="text-sm text-gray-500">Core of our economy. Over 250 hotels, resorts, and vacation rentals.</div>
+                                </div>
+                            </div>
+                            <div class="flex gap-5">
+                                <div class="text-4xl font-light text-gray-300">02</div>
+                                <div>
+                                    <div class="font-semibold text-[#003366]">Professional Services</div>
+                                    <div class="text-sm text-gray-500">Finance, healthcare, legal, and technology sectors expanding rapidly.</div>
+                                </div>
+                            </div>
+                            <div class="flex gap-5">
+                                <div class="text-4xl font-light text-gray-300">03</div>
+                                <div>
+                                    <div class="font-semibold text-[#003366]">Retail &amp; Dining</div>
+                                    <div class="text-sm text-gray-500">Unique shops, galleries, and over 200 restaurants island-wide.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- ATTRACTIONS SECTION                                                          -->
+    <!-- ============================================================================ -->
+    <section id="attractions" data-section="attractions" class="py-20 bg-[#003366] text-white">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="grid md:grid-cols-12 gap-x-16">
+                <div class="md:col-span-5">
+                    <div class="text-teal-400 text-sm font-medium mb-3 tracking-widest">EXPLORE OUR ISLAND</div>
+                    <h2 class="heading-font text-5xl font-semibold text-white tracking-tighter">Signature Attractions</h2>
+                    <p class="mt-6 text-white/70 text-lg">
+                        From pristine beaches and maritime forests to cultural sites and recreational facilities, Hilton Head offers something for everyone.
+                    </p>
+                    
+                    <div class="mt-10 hidden md:block">
+                        <div onclick="showAttractionDetail(0)" class="attraction-tab flex items-center gap-4 py-6 border-b border-white/10 cursor-pointer group active-tab">
+                            <div class="text-4xl transition-transform group-hover:scale-110">🏖️</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Coligny Beach Park</div>
+                                <div class="text-xs text-teal-300">Most visited beach on the island</div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-xs text-teal-300"></i>
+                        </div>
+                        
+                        <div onclick="showAttractionDetail(1)" class="attraction-tab flex items-center gap-4 py-6 border-b border-white/10 cursor-pointer group">
+                            <div class="text-4xl transition-transform group-hover:scale-110">🌲</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Pinckney Island Wildlife Refuge</div>
+                                <div class="text-xs text-teal-300">Over 4,000 acres of protected land</div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-xs text-teal-300"></i>
+                        </div>
+                        
+                        <div onclick="showAttractionDetail(2)" class="attraction-tab flex items-center gap-4 py-6 border-b border-white/10 cursor-pointer group">
+                            <div class="text-4xl transition-transform group-hover:scale-110">⛳</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Harbour Town Golf Links</div>
+                                <div class="text-xs text-teal-300">Home of the PGA Heritage Classic</div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-xs text-teal-300"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Attraction visual pane -->
+                <div class="md:col-span-7 mt-10 md:mt-0">
+                    <div id="attraction-visual" 
+                         class="bg-cover bg-center aspect-video rounded-3xl shadow-2xl relative flex items-end overflow-hidden"
+                         style="background-image: url('https://picsum.photos/id/1016/1200/700')">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                        
+                        <div class="relative p-8 max-w-xs">
+                            <div id="attraction-title" class="text-3xl font-semibold text-white heading-font">Coligny Beach Park</div>
+                            <div id="attraction-subtitle" class="text-teal-400 text-sm">A 12-acre oceanfront park with shops, dining, and activities</div>
+                            
+                            <div class="mt-6 flex items-center text-xs gap-x-5 text-white/70">
+                                <div class="flex items-center gap-x-1">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>Open daily</span>
+                                </div>
+                                <div>Free admission</div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute bottom-8 right-8 bg-white text-[#003366] text-xs font-medium px-5 h-7 flex items-center rounded-3xl shadow-inner">
+                            SEE ALL 28 ATTRACTIONS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- EVENTS SECTION                                                               -->
+    <!-- ============================================================================ -->
+    <section id="events" data-section="events" class="py-20 bg-white">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col lg:flex-row gap-y-8 justify-between items-end mb-12">
+                <div>
+                    <span class="text-xs uppercase font-semibold text-amber-500">Mark your calendar</span>
+                    <h2 class="heading-font text-5xl font-semibold text-[#003366] tracking-tight">Signature Events</h2>
+                </div>
+                <a href="#" onclick="event.preventDefault();alert('Full events calendar would open here in a live site.')"
+                   class="flex items-center text-sm font-medium gap-x-2 text-[#36D6B5]">
+                    FULL CALENDAR 
+                    <span class="text-xl leading-none">→</span>
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Event 1 -->
+                <div class="group bg-white border border-gray-200 hover:border-[#36D6B5] rounded-3xl transition-all overflow-hidden">
+                    <div class="h-56 bg-[url('https://picsum.photos/id/160/600/400')] bg-cover relative">
+                        <div class="absolute top-6 left-6 bg-white text-[#003366] text-[10px] font-bold px-3 py-1 rounded-3xl shadow">APR 13-19 2026</div>
+                    </div>
+                    <div class="p-7">
+                        <div class="flex justify-between text-xs">
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-3xl">GOLF</span>
+                            <span class="text-gray-400">Hilton Head Island</span>
+                        </div>
+                        <div class="font-semibold text-xl text-[#003366] mt-3 leading-none">The Heritage Classic</div>
+                        <div class="text-xs text-gray-500 mt-6">PGA TOUR • Harbour Town Golf Links • $12M purse</div>
+                        
+                        <button onclick="window.__processPayment ? window.__processPayment({amountCents: 12500, email: 'visitor@hiltonhead.com', productName: 'Heritage Classic VIP Package', productDescription: '4-day tournament access + hospitality tent'}) : alert('Ticket purchase flow would launch here')"
+                                class="mt-8 text-xs tracking-widest font-medium border border-gray-300 hover:border-[#003366] w-full py-5 rounded-2xl transition-colors">
+                            GET TICKETS • $125
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="group bg-white border border-gray-200 hover:border-[#36D6B5] rounded-3xl transition-all overflow-hidden">
+                    <div class="h-56 bg-[url('https://picsum.photos/id/201/600/400')] bg-cover relative">
+                        <div class="absolute top-6 left-6 bg-white text-[#003366] text-[10px] font-bold px-3 py-1 rounded-3xl shadow">JUN 12-15</div>
+                    </div>
+                    <div class="p-7">
+                        <div class="flex justify-between text-xs">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-3xl">ARTS</span>
+                            <span class="text-gray-400">Sea Pines Resort</span>
+                        </div>
+                        <div class="font-semibold text-xl text-[#003366] mt-3 leading-none">Hilton Head Wine &amp; Food Festival</div>
+                        <div class="text-xs text-gray-500 mt-6">Over 40 wineries • Celebrity chefs • Live music</div>
+                        
+                        <div class="mt-8 text-xs bg-teal-50 text-teal-700 px-5 py-5 rounded-3xl flex items-center justify-center gap-x-2 cursor-pointer hover:bg-teal-100 transition-colors">
+                            <i class="fa-solid fa-wine-glass"></i>
+                            <span class="font-medium">EARLY BIRD TICKETS AVAILABLE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="group bg-white border border-gray-200 hover:border-[#36D6B5] rounded-3xl transition-all overflow-hidden">
+                    <div class="h-56 bg-[url('https://picsum.photos/id/251/600/400')] bg-cover relative">
+                        <div class="absolute top-6 left-6 bg-white text-[#003366] text-[10px] font-bold px-3 py-1 rounded-3xl shadow">NOV 7</div>
+                    </div>
+                    <div class="p-7">
+                        <div class="flex justify-between text-xs">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-3xl">CULTURE</span>
+                            <span class="text-gray-400">Historic Mitchelville</span>
+                        </div>
+                        <div class="font-semibold text-xl text-[#003366] mt-3 leading-none">Gullah Festival</div>
+                        <div class="text-xs text-gray-500 mt-6">Celebrating Gullah Geechee culture, food, and heritage</div>
+                        
+                        <button onclick="alert('Free community event. Registration opens in September 2026.')"
+                                class="mt-8 text-xs tracking-widest font-medium border border-gray-300 hover:border-[#003366] w-full py-5 rounded-2xl transition-colors">
+                            FREE ADMISSION
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- AI WIDGET / CHAT SECTION                                                     -->
+    <!-- ============================================================================ -->
+    <section data-section="ai-assistant" class="py-20 bg-gradient-to-br from-[#003366] to-[#002244]">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="max-w-xl mx-auto text-center">
+                <div class="inline-flex px-6 py-2 bg-white/10 text-white text-xs font-medium rounded-3xl items-center gap-x-3 mb-6">
+                    <div class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-[#36D6B5]"></span>
+                    </div>
+                    POWERED BY PAYMEGPT AI
+                </div>
+                
+                <h2 class="heading-font text-white text-5xl font-medium tracking-tighter mb-4">Ask our AI Concierge anything</h2>
+                <p class="text-teal-100">Real-time answers about beaches, restaurants, golf tee times, events, and local recommendations.</p>
+                
+                <!-- Simulated AI Widget -->
+                <div class="mt-12 bg-white rounded-3xl shadow-2xl overflow-hidden max-w-md mx-auto">
+                    <div class="bg-[#003366] px-6 py-4 text-white flex items-center gap-x-3">
+                        <div class="w-8 h-8 bg-[#36D6B5] text-[#003366] rounded-2xl flex items-center justify-center text-xl">🤖</div>
+                        <div>
+                            <div class="text-sm font-semibold">Hilton Head AI Assistant</div>
+                            <div class="text-teal-300 text-xs">Online • answers instantly</div>
+                        </div>
+                    </div>
+                    
+                    <div class="h-72 p-6 text-left space-y-7 overflow-auto bg-gray-50" id="chat-window">
+                        <!-- Populated by JS -->
+                    </div>
+                    
+                    <div class="px-5 py-5 border-t flex items-center gap-3 bg-white">
+                        <input id="ai-input" 
+                               onkeypress="if(event.key === 'Enter') sendAIMessage()"
+                               type="text" 
+                               class="flex-1 bg-gray-100 border-0 focus:ring-1 focus:ring-teal-400 rounded-3xl px-6 py-4 text-sm placeholder:text-gray-400" 
+                               placeholder="Where can I rent a bike?">
+                        <button onclick="sendAIMessage()" 
+                                class="w-11 h-11 bg-[#36D6B5] hover:bg-teal-400 transition-colors rounded-2xl text-[#003366] flex items-center justify-center">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <p class="text-teal-200 text-xs mt-8">Try asking: “What time does Coligny Beach open?” or “Best restaurants for seafood?”</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- CONTACT FORM SECTION                                                         -->
+    <!-- Includes name, email, phone, subject, message. Submits to PayMeGPT webhook  -->
+    <!-- ============================================================================ -->
+    <section id="contact" data-section="contact" class="py-20 bg-white">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-12 gap-16">
+                <!-- Left column -->
+                <div class="lg:col-span-5">
+                    <div class="max-w-xs">
+                        <span class="text-[#36D6B5] uppercase text-xs font-semibold">Town of Hilton Head Island</span>
+                        <h2 class="heading-font text-[#003366] text-[42px] leading-none font-semibold tracking-tighter mt-2">Get in touch with us</h2>
+                        <p class="mt-6 text-gray-600">
+                            Whether you're planning a visit, looking to relocate, or have a question about town services, our team is ready to help.
+                        </p>
+                        
+                        <div class="mt-16">
+                            <div class="flex gap-x-4">
+                                <div class="text-[#36D6B5]">
+                                    <i class="fa-solid fa-location-dot text-3xl"></i>
+                                </div>
+                                <div class="text-sm">
+                                    <div class="font-medium text-[#003366]">Town Hall</div>
+                                    <div class="text-gray-500">1 Town Center Court<br>Hilton Head Island, SC 29928</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10 flex gap-x-4">
+                            <div class="text-[#36D6B5]">
+                                <i class="fa-solid fa-phone text-3xl"></i>
+                            </div>
+                            <div>
+                                <a href="tel:8433414600" class="font-medium text-[#003366] hover:text-teal-500 transition-colors">(843) 341-4600</a>
+                                <div class="text-xs text-gray-500">Monday - Friday, 8:30am - 5pm</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-16 pt-8 border-t text-xs">
+                            <div class="flex items-center gap-x-8">
+                                <a href="https://www.facebook.com/hiltonheadsc" target="_blank" class="hover:text-[#36D6B5] transition-colors">FACEBOOK</a>
+                                <a href="https://www.instagram.com/hiltonheadisland" target="_blank" class="hover:text-[#36D6B5] transition-colors">INSTAGRAM</a>
+                                <a href="#" class="hover:text-[#36D6B5] transition-colors">YOUTUBE</a>
+                            </div>
+                            <div class="text-gray-400 mt-8 text-[10px]">© 2026 Town of Hilton Head Island, South Carolina. All Rights Reserved.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="lg:col-span-7">
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)" 
+                          class="bg-white shadow-xl border border-gray-100 rounded-3xl p-8 md:p-10">
+                        
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-2">FULL NAME</label>
+                                <input id="name" type="text" required
+                                       class="form-input block w-full border border-gray-200 focus:border-teal-400 rounded-2xl px-5 py-6 text-base">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-2">EMAIL ADDRESS</label>
+                                <input id="email" type="email" required
+                                       class="form-input block w-full border border-gray-200 focus:border-teal-400 rounded-2xl px-5 py-6 text-base">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-6 mt-6">
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-2">PHONE NUMBER</label>
+                                <input id="phone" type="tel"
+                                       class="form-input block w-full border border-gray-200 focus:border-teal-400 rounded-2xl px-5 py-6 text-base">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-2">SUBJECT</label>
+                                <select id="subject" 
+                                        class="form-input block w-full border border-gray-200 focus:border-teal-400 rounded-2xl px-5 py-6 text-base bg-white">
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Visit Information">Visit / Tourism</option>
+                                    <option value="Business Relocation">Business Relocation</option>
+                                    <option value="Event Information">Event Information</option>
+                                    <option value="Residential Inquiry">Move to Hilton Head</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <label class="block text-xs font-medium text-gray-500 mb-2">MESSAGE</label>
+                            <textarea id="message" rows="5" required
+                                      class="form-input block w-full border border-gray-200 focus:border-teal-400 rounded-3xl px-5 py-6 text-base resize-none"></textarea>
+                        </div>
+                        
+                        <div class="mt-10 flex items-center justify-between">
+                            <button type="submit" id="submit-btn"
+                                    class="px-10 py-6 bg-[#003366] hover:bg-[#002244] transition-all text-white font-semibold rounded-3xl flex items-center gap-x-3">
+                                <span id="btn-text">SEND MESSAGE</span>
+                                <i id="btn-icon" class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            
+                            <div id="form-status" class="hidden text-xs text-teal-500 font-medium"></div>
+                        </div>
+                        
+                        <!-- Success message -->
+                        <div id="success-message" class="hidden mt-6 bg-teal-50 border border-teal-200 rounded-3xl p-8 text-center">
+                            <i class="fa-solid fa-circle-check text-5xl text-teal-400 mx-auto"></i>
+                            <div class="mt-6 text-[#003366] font-semibold">Thank you!</div>
+                            <div class="text-teal-700 text-sm mt-2">Your message has been received. A member of our team will respond within 24 hours.</div>
+                            <button onclick="resetForm()" 
+                                    class="mt-8 text-xs border border-teal-300 hover:bg-white px-8 py-4 rounded-3xl text-teal-700 font-medium">
+                                SEND ANOTHER MESSAGE
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- FINAL CTA BANNER                                                             -->
+    <!-- ============================================================================ -->
+    <div data-section="final-cta" class="bg-[#36D6B5] py-9">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-y-5">
+                <div class="text-[#003366] font-semibold text-xl">Ready to experience the Hilton Head lifestyle?</div>
+                <div class="flex items-center gap-x-4">
+                    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" 
+                            class="bg-[#003366] text-white px-8 h-12 rounded-3xl text-sm font-semibold flex items-center gap-x-2">
+                        CONTACT TOWN HALL
+                    </button>
+                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                            class="border border-[#003366] text-[#003366] px-8 h-12 rounded-3xl text-sm font-medium flex items-center">
+                        BACK TO TOP
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================================ -->
+    <!-- FOOTER                                                                       -->
+    <!-- ============================================================================ -->
+    <footer data-section="footer" class="bg-[#002244] text-white/70 text-xs">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 pt-16 pb-8">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-y-10">
+                <div>
+                    <div class="flex items-center gap-x-3 text-white mb-6">
+                        <div class="w-8 h-8 bg-[#36D6B5] text-[#002244] rounded-2xl flex items-center justify-center text-3xl">🌴</div>
+                        <span class="heading-font text-3xl font-bold tracking-tighter">HILTON HEAD</span>
+                    </div>
+                    <div class="leading-snug text-white/50">
+                        One Town Center Court<br>
+                        Hilton Head Island, SC 29928
+                    </div>
+                    <div class="mt-8 text-[10px] text-white/40">EST. 1983</div>
+                </div>
+                
+                <div>
+                    <div class="uppercase text-teal-300 text-xs tracking-widest mb-6">Government</div>
+                    <div class="space-y-4">
+                        <a href="#" class="block hover:text-white transition-colors">Town Council</a>
+                        <a href="#" class="block hover:text-white transition-colors">Departments</a>
+                        <a href="#" class="block hover:text-white transition-colors">Public Meetings</a>
+                        <a href="#" class="block hover:text-white transition-colors">Permits &amp; Licenses</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="uppercase text-teal-300 text-xs tracking-widest mb-6">Visit</div>
+                    <div class="space-y-4">
+                        <a href="#" class="block hover:text-white transition-colors">Beaches</a>
+                        <a href="#" class="block hover:text-white transition-colors">Golf Courses</a>
+                        <a href="#" class="block hover:text-white transition-colors">Dining Guide</a>
+                        <a href="#" class="block hover:text-white transition-colors">Where to Stay</a>
+                        <a href="#" class="block hover:text-white transition-colors">Getting Here</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="uppercase text-teal-300 text-xs tracking-widest mb-6">Live</div>
+                    <div class="space-y-4">
+                        <a href="#" class="block hover:text-white transition-colors">Relocation Guide</a>
+                        <a href="#" class="block hover:text-white transition-colors">Schools</a>
+                        <a href="#" class="block hover:text-white transition-colors">Real Estate</a>
+                        <a href="#" class="block hover:text-white transition-colors">Community Calendar</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-[#003366]/60 rounded-3xl px-6 py-6 text-xs">
+                        <div class="font-medium text-white mb-2">Town Newsletter</div>
+                        <div class="text-teal-200 text-[10px]">Monthly updates on events, town projects, and special offers.</div>
+                        <div class="mt-6 flex">
+                            <input type="email" id="newsletter-email" placeholder="your@email.com" 
+                                   class="bg-white/10 border border-white/30 text-xs px-4 py-4 flex-1 rounded-l-3xl placeholder:text-white/30 focus:outline-none">
+                            <button onclick="subscribeNewsletter()" 
+                                    class="bg-[#36D6B5] text-[#003366] px-7 font-semibold rounded-r-3xl text-xs">JOIN</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-16 mt-16 border-t border-white/10 text-[10px] flex flex-col md:flex-row justify-between items-center gap-y-4">
+                <div>© 2026 Town of Hilton Head Island. All rights reserved.</div>
+                <div class="flex items-center gap-x-6">
+                    <a href="#" class="hover:text-white">Accessibility</a>
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Sitemap</a>
+                </div>
+                <div class="flex items-center gap-x-5 text-lg">
+                    <i onclick="window.open('https://www.facebook.com/hiltonheadsc','_blank')" class="fa-brands fa-facebook cursor-pointer hover:text-[#36D6B5]"></i>
+                    <i onclick="window.open('https://www.instagram.com/hiltonheadisland','_blank')" class="fa-brands fa-instagram cursor-pointer hover:text-[#36D6B5]"></i>
+                    <i onclick="window.open('https://twitter.com/hiltonheadsc','_blank')" class="fa-brands fa-x-twitter cursor-pointer hover:text-[#36D6B5]"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== TAILWIND SCRIPT INITIALIZATION =====
+        function initializeTailwind() {
+            tailwind.config = {
+                content: [],
+                theme: {
+                    extend: {}
+                }
+            }
+        }
+        
+        // ===== MOBILE MENU TOGGLE =====
+        // Function: toggleMobileMenu()
+        // Purpose: Opens and closes the mobile navigation drawer
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu')
+            menu.classList.toggle('hidden')
+        }
+        
+        // ===== ATTRACTION DETAIL ROTATOR =====
+        // Rotates between three different attractions in the visual pane
+        let currentAttraction = 0
+        const attractions = [
+            {
+                title: "Coligny Beach Park",
+                subtitle: "A 12-acre oceanfront park with shops, dining, and activities",
+                image: "https://picsum.photos/id/1016/1200/700"
+            },
+            {
+                title: "Pinckney Island",
+                subtitle: "National Wildlife Refuge with 14 miles of trails",
+                image: "https://picsum.photos/id/160/1200/700"
+            },
+            {
+                title: "Harbour Town",
+                subtitle: "Iconic lighthouse and home of the PGA Heritage Classic",
+                image: "https://picsum.photos/id/201/1200/700"
+            }
+        ]
+        
+        function showAttractionDetail(index) {
+            currentAttraction = index
+            const visual = document.getElementById('attraction-visual')
+            const titleEl = document.getElementById('attraction-title')
+            const subtitleEl = document.getElementById('attraction-subtitle')
+            
+            visual.style.backgroundImage = `url('${attractions[index].image}')`
+            titleEl.textContent = attractions[index].title
+            subtitleEl.textContent = attractions[index].subtitle
+            
+            // Toggle active tab styles
+            document.querySelectorAll('.attraction-tab').forEach((tab, i) => {
+                if (i === index) {
+                    tab.classList.add('active-tab', 'text-teal-300')
+                } else {
+                    tab.classList.remove('active-tab', 'text-teal-300')
+                }
+            })
+        }
+        
+        // ===== AI CHAT WIDGET SIMULATOR =====
+        // Handles fake conversation with the AI concierge
+        const sampleResponses = {
+            "bike": "You can rent bikes at Coligny Beach Park or at most resorts. Prices start at $18 per day. Would you like a map of the 60+ miles of bike trails?",
+            "beach": "Our beaches are open from sunrise to sunset. Coligny Beach has free parking, restrooms, and lifeguards on duty during peak season.",
+            "golf": "Hilton Head Island is home to 24 world-class golf courses. The Heritage Classic is held every April at Harbour Town Golf Links.",
+            "restaurant": "Some local favorites include The Salty Dog Cafe, Hudson's Seafood House on the Docks, and Lucky Rooster. What cuisine are you craving?",
+            "default": "Thanks for asking! Hilton Head has over 200 restaurants, 12 miles of beaches, and year-round events. What specifically would you like to know?"
+        }
+        
+        function addChatMessage(text, isUser = false) {
+            const chatWindow = document.getElementById('chat-window')
+            const messageDiv = document.createElement('div')
+            messageDiv.className = `flex ${isUser ? 'justify-end' : 'justify-start'}`
+            
+            if (isUser) {
+                messageDiv.innerHTML = `
+                    <div class="max-w-[75%] bg-[#003366] text-white px-5 py-3 rounded-3xl rounded-tr-none text-sm">
+                        ${text}
+                    </div>
+                `
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="max-w-[75%] bg-white border border-gray-100 shadow-sm px-5 py-3 rounded-3xl rounded-tl-none text-sm text-gray-800">
+                        ${text}
+                    </div>
+                `
+            }
+            
+            chatWindow.appendChild(messageDiv)
+            chatWindow.scrollTop = chatWindow.scrollHeight
+        }
+        
+        function sendAIMessage() {
+            const input = document.getElementById('ai-input')
+            const message = input.value.trim()
+            
+            if (!message) return
+            
+            // Add user message
+            addChatMessage(message, true)
+            input.value = ''
+            
+            // Simulate thinking
+            setTimeout(() => {
+                let responseText = sampleResponses.default
+                
+                const lowerMsg = message.toLowerCase()
+                
+                if (lowerMsg.includes('bike') || lowerMsg.includes('bicycle')) responseText = sampleResponses.bike
+                else if (lowerMsg.includes('beach') || lowerMsg.includes('ocean')) responseText = sampleResponses.beach
+                else if (lowerMsg.includes('golf') || lowerMsg.includes('heritage')) responseText = sampleResponses.golf
+                else if (lowerMsg.includes('eat') || lowerMsg.includes('food') || lowerMsg.includes('restaurant')) responseText = sampleResponses.restaurant
+                
+                addChatMessage(responseText)
+            }, 920)
+        }
+        
+        // Seed initial chat messages
+        function seedChat() {
+            const chatWindow = document.getElementById('chat-window')
+            chatWindow.innerHTML = `
+                <div class="flex justify-start">
+                    <div class="max-w-[75%] bg-white border border-gray-100 shadow-sm px-5 py-3 rounded-3xl rounded-tl-none text-sm text-gray-800">
+                        Hello! I'm the Hilton Head AI assistant. How can I help you today?
+                    </div>
+                </div>
+            `
+        }
+        
+        // ===== FORM SUBMISSION HANDLER =====
+        // Submits contact data to the PayMeGPT webhook endpoint as instructed
+        function handleContactSubmit(e) {
+            e.preventDefault()
+            
+            const submitBtn = document.getElementById('submit-btn')
+            const btnText = document.getElementById('btn-text')
+            const statusEl = document.getElementById('form-status')
+            
+            // Disable button and show loading
+            submitBtn.disabled = true
+            btnText.textContent = 'SENDING...'
+            statusEl.classList.remove('hidden')
+            statusEl.textContent = 'Submitting your inquiry...'
+            statusEl.style.color = '#0ea5e9'
+            
+            const name = document.getElementById('name').value
+            const email = document.getElementById('email').value
+            const phone = document.getElementById('phone').value
+            const subject = document.getElementById('subject').value
+            const message = document.getElementById('message').value
+            
+            // Construct payload for PayMeGPT webhook
+            const payload = {
+                contactEmail: email,
+                contactName: name,
+                contactPhone: phone || undefined,
+                data: {
+                    subject: subject,
+                    message: message,
+                    source: "HiltonHead-Landing-Page",
+                    page: "Official Town Site",
+                    timestamp: new Date().toISOString()
+                }
+            }
+            
+            fetch("https://paymegpt.com/api/webhooks/flow/4305/89f4aa652163a7e5715a3af9f1e32c236fec224b81b8b28adbdda2fec86f90bc", {
+                method: "POST",
+                headers: { 
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Network error')
+                return response.json()
+            })
+            .then(result => {
+                // Show success state
+                document.getElementById('contact-form').classList.add('hidden')
+                document.getElementById('success-message').classList.remove('hidden')
+                console.log('Contact form submitted successfully:', result)
+            })
+            .catch(err => {
+                console.error(err)
+                statusEl.style.color = '#ef4444'
+                statusEl.textContent = 'Something went wrong. Please try again.'
+                submitBtn.disabled = false
+                btnText.textContent = 'SEND MESSAGE'
+            })
+        }
+        
+        function resetForm() {
+            const form = document.getElementById('contact-form')
+            const successMsg = document.getElementById('success-message')
+            
+            form.reset()
+            form.classList.remove('hidden')
+            successMsg.classList.add('hidden')
+            
+            const submitBtn = document.getElementById('submit-btn')
+            submitBtn.disabled = false
+            document.getElementById('btn-text').textContent = 'SEND MESSAGE'
+        }
+        
+        // ===== NEWSLETTER SUBSCRIBE (demo) =====
+        function subscribeNewsletter() {
+            const emailField = document.getElementById('newsletter-email')
+            if (emailField.value.trim() === '') {
+                emailField.classList.add('!border-red-300')
+                setTimeout(() => emailField.classList.remove('!border-red-300'), 1500)
+                return
+            }
+            
+            const originalText = emailField.parentElement.innerHTML
+            emailField.parentElement.innerHTML = `
+                <div class="bg-teal-800 text-teal-100 text-center py-4 rounded-3xl text-sm font-medium">Thank you for subscribing!</div>
+            `
+            
+            setTimeout(() => {
+                emailField.parentElement.innerHTML = originalText
+                emailField.value = ''
+            }, 2400)
+        }
+        
+        // ===== KEYBOARD SHORTCUT FOR DEMO PURPOSES =====
+        function addKeyboardListeners() {
+            document.addEventListener('keydown', function(e) {
+                if (e.metaKey && e.key === "k") {
+                    e.preventDefault()
+                    const contactSection = document.getElementById('contact')
+                    contactSection.scrollIntoView({ behavior: "smooth" })
+                }
+            })
+        }
+        
+        // ===== DONATION / PAYMENT STUBS =====
+        // These are included for compatibility in case the platform injects window.__processPayment or __processDonation
+        window.__processPayment = function(config) {
+            console.log('%cStripe Checkout would open here for: ' + config.productName, 'color:#36D6B5; font-size:10px')
+            alert('Thank you! In a live deployment this would redirect to a secure Stripe checkout for $' + (config.amountCents / 100))
+        }
+        
+        window.__processDonation = function(cents, email, name, message) {
+            console.log('%cDonation processed for $' + (cents / 100), 'color:#36D6B5; font-size:10px')
+        }
+        
+        // ===== INIT APPLICATION =====
+        function initializePage() {
+            initializeTailwind()
+            seedChat()
+            addKeyboardListeners()
+            
+            // Make the first attraction tab active
+            const firstTab = document.querySelector('.attraction-tab')
+            if (firstTab) firstTab.classList.add('text-teal-300')
+            
+            // Demo: auto-send a message after 6 seconds
+            setTimeout(() => {
+                const chatWindow = document.getElementById('chat-window')
+                if (chatWindow.children.length < 3) {
+                    addChatMessage("What time does the lighthouse open for tours?", true)
+                    setTimeout(() => {
+                        addChatMessage("Harbour Town Lighthouse is open daily from 10am until sunset. Tickets are $5 for adults.")
+                    }, 1100)
+                }
+            }, 6300)
+            
+            // Progressive scroll indicator on hero
+            console.log('%c✅ Hilton Head Island landing page initialized successfully. All sections interactive.', 'color:#36D6B5; font-family:monospace')
+        }
+        
+        // Boot the app
+        window.onload = initializePage
+    </script>
+</body>
+</html>
